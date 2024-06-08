@@ -8,6 +8,7 @@
 
 body {
     font-family: 'Kanit';
+    font-size: 2vw;
     margin: 0;
     padding: 0;
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../pictures/bg.jpg") no-repeat center;
@@ -16,6 +17,10 @@ body {
     color: white;
     scrollbar-width: none;
     -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+.nav-bg {
+    background: rgb(35, 35, 35);
 }
 
 body.stop-transitions * {
@@ -36,17 +41,38 @@ body.stop-transitions * {
 }
 
 .header {
-    padding: 1vw;
+    width: 100vw;
     position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    padding: 1vw 0;
 }
 
-.nav-button {
+.header-item {
+    padding: 0 1vw;
+}
+
+.nav-button1,
+.nav-button2 {
     width: 4vw;
     height: 4vw;
     border-radius: 1vw;
 }
 
-.nav-button div {
+.nav-button1 div {
+    height: 12%;
+    margin: 12% 10%;
+    background-color: white;
+    border-radius: 1vw;
+}
+
+.nav-button2 {
+    background: none;
+    border: none;
+}
+
+.nav-button2 div {
     height: 12%;
     margin: 12% 10%;
     background-color: white;
@@ -105,5 +131,63 @@ button:hover {
         background-color: black;
     }
 }
+
+.nav-header {
+    position: relative;
+}
+
+.nav-header a, .nav-rodmae a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-header a:hover, .nav-rodmae a:hover {
+    text-shadow: 0px 0px 30px white;
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+}
+
+.nav-rodmae {
+    width: 90vw;
+    height: 75vh;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 7.5vw;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-rodmae-item {
+    width: 16vw;
+    height: 16vw;
+    display: grid;
+    grid-template-rows: 12vw;
+}
+
+.rodmae-pic {
+    text-align: center;
+}
+
+.rodmae-pic img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.rodmae-text p {
+    margin: 0;
+    text-align: center;
+}
+
+.rodmae-text1 {
+    font-size: 1.5vw;
+}
+
+.rodmae-text2 {
+    font-size: 1vw;
+}
+
+a {}
 
 @media screen and (max-width: 1000px) {}
