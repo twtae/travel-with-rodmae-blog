@@ -88,6 +88,7 @@ main {
     display: grid;
     grid-column: 3;
     grid-row: 3;
+    align-items: center;
 }
 
 .title-red {
