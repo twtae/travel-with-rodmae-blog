@@ -201,7 +201,7 @@ img {
     grid-template-columns: 1fr 25vw;
 }
 
-.content-pic1, .content-pic2 {
+.content-pic {
     grid-row: 1 / 3;
 
     img {
@@ -209,11 +209,11 @@ img {
     }
 }
 
-.content-pic1 {
+.content-container1 .content-pic {
     grid-column: 1 / 2;
 }
 
-.content-pic2 {
+.content-container2 .content-pic {
     grid-column: 2 / 3;
 }
 
@@ -221,6 +221,10 @@ img {
 .content-text {
     display: flex;
     align-items: center;
+}
+
+.content-container2 .content-title {
+    justify-self: end;
 }
 
 .content-text {
@@ -311,17 +315,17 @@ img {
         grid-template-rows: 40vw 40vw 10vw;
     }
 
-    .content-pic1, .content-pic2 {
+    .content-pic {
         width: 40vw;
-    }
-
-    .content-container2 .content-title {
-        text-align: end;
     }
 
     .content-title,
     .content-text {
         display: flex;
+    }
+
+    .content-container2 .content-title {
+        text-align: end;
     }
 
     .content-text {
