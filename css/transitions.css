@@ -1,12 +1,12 @@
-html.is-changing .transition-main {
+html.is-changing.to-overlay .transition-main {
     transition: transform 400ms ease-in-out;
 }
 
-html.is-animating.is-leaving .transition-main {
+html.is-animating.is-leaving.to-overlay .transition-main {
     transform: translateY(calc(1 * 5vh * var(--overlay-direction, 1)));
 }
 
-html.is-animating.is-rendering .transition-main {
+html.is-animating.is-rendering.to-overlay .transition-main {
     transform: translateY(calc(-1 * 5vh * var(--overlay-direction, 1)));
 }
 
@@ -17,25 +17,47 @@ html.is-animating.is-rendering .transition-main {
     right: 0;
     bottom: 0;
     z-index: 999;
-    background-color: gray;
+    background-color: rgb(60, 60, 60);
     opacity: 0;
     transform: translate3d(0, calc(-1 * 100% * var(--overlay-direction, 1)), 0);
     pointer-events: none;
 }
 
-html.is-changing .transition-overlay {
+html.is-changing.to-overlay .transition-overlay {
     transition: transform 400ms ease-in-out;
     opacity: 1;
 }
 
-html.is-animating .transition-overlay {
+html.is-animating.to-overlay .transition-overlay {
     transform: translate3d(0, 0, 0);
 }
 
-html.is-rendering .transition-overlay {
+html.is-rendering.to-overlay .transition-overlay {
     transform: translate3d(0, calc(var(--overlay-direction, 1) * 100%), 0);
 }
 
-html.to-back {
-    --overlay-direction: -1;
+.transition-main {
+    transition-property: opacity, transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+    transform: translateX(0);
+    opacity: 1;
+}
+
+html.is-animating .transition-main {
+    opacity: 0;
+    transform: translateX(-1em);
+}
+
+html.is-leaving .transition-main {
+    transform: translateX(1em);
+}
+
+html.is-animating.to-left .transition-main {
+    opacity: 0;
+    transform: translateX(1em);
+}
+
+html.is-leaving.to-left .transition-main {
+    transform: translateX(-1em);
 }
