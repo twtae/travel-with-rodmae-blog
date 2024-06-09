@@ -305,14 +305,18 @@ img {
         font-size: 2vw;
     }
 
-    .content-container {
+    .content-container1, .content-container2 {
         height: 90vw;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 40vw 40vw 10vw;
     }
 
-    .content-pic {
+    .content-pic1, .content-pic2 {
         width: 40vw;
+    }
+
+    .content-container2 .content-title {
+        text-align: end;
     }
 
     .content-title,
