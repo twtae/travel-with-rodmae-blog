@@ -137,7 +137,7 @@ button:hover {
     position: relative;
 }
 
-.nav-header a, .nav-rodmae a {
+a {
     color: white;
     text-decoration: none;
 }
