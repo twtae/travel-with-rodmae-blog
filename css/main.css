@@ -325,11 +325,6 @@ img {
         width: 40vw;
     }
 
-    .content-title,
-    .content-text {
-        display: flex;
-    }
-
     .content-container2 .content-title {
         text-align: end;
     }
