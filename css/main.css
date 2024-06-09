@@ -342,6 +342,38 @@ img {
     fill: #c13584;
 }
 
+.dropdown {
+    cursor: pointer;
+    display: block;
+    align-self: center;
+}
+
+.slide {
+    clear: both;
+    width: 30%;
+    height: 0px;
+    overflow: hidden;
+    text-align: center;
+    transition: height .4s ease;
+    position: absolute;
+    list-style-type: none;
+}
+
+.slide li {
+    background-color: #333;
+    padding: 1vw;
+}
+
+#touch {
+    position: absolute;
+    opacity: 0;
+    height: 0px;
+}
+
+#touch:checked+.slide {
+    height: 30vw;
+}
+
 @media screen and (max-aspect-ratio: 22/25) {
     body {
         font-size: 3vw;
@@ -464,5 +496,13 @@ img {
     .github svg {
         width: 3vw;
         height: 3vw;
+    }
+
+    .slide {
+        width: 50%;
+    }
+
+    #touch:checked+.slide {
+        height: 40vw;
     }
 }
