@@ -184,7 +184,8 @@ img {
     font-size: 1vw;
 }
 
-.content-container1, .content-container2 {
+.content-container1,
+.content-container2 {
     width: 80vw;
     height: 30vw;
     display: grid;
@@ -273,6 +274,74 @@ img {
     align-self: center;
 }
 
+.social-buttons {
+    grid-column: 3 / 4;
+    justify-self: end;
+    align-self: end;
+    display: flex;
+}
+
+.social-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3vw;
+    height: 3vw;
+    border-radius: 50%;
+    margin: 0 10px;
+    background-color: #fff;
+    box-shadow: 0px 0px 4px #00000027;
+    transition: 0.3s;
+}
+
+.social-button:hover {
+    background-color: #f2f2f2;
+    box-shadow: 0px 0px 6px 3px #00000027;
+}
+
+.social-buttons svg {
+    transition: 0.3s;
+    height: 1.5vw;
+}
+
+.facebook {
+    background-color: #3b5998;
+}
+
+.facebook svg {
+    fill: #f2f2f2;
+}
+
+.facebook:hover svg {
+    fill: #3b5998;
+}
+
+.github {
+    background-color: #333;
+}
+
+.github svg {
+    width: 1.5vw;
+    height: 1.5vw;
+    fill: #f2f2f2;
+}
+
+.github:hover svg {
+    fill: #333;
+}
+
+.instagram {
+    background-color: #c13584;
+}
+
+.instagram svg {
+    fill: #f2f2f2;
+}
+
+.instagram:hover svg {
+    fill: #c13584;
+}
+
 @media screen and (max-aspect-ratio: 22/25) {
     body {
         font-size: 3vw;
@@ -332,7 +401,8 @@ img {
         font-size: 2vw;
     }
 
-    .content-container1, .content-container2 {
+    .content-container1,
+    .content-container2 {
         height: 90vw;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 40vw 40vw 10vw;
@@ -349,7 +419,7 @@ img {
     .content-title {
         line-height: 1;
     }
-    
+
     .sub-title {
         font-size: 3vw
     }
@@ -376,5 +446,23 @@ img {
     .credit {
         font-size: 2vw;
         align-self: start;
+    }
+
+    .social-buttons {
+        align-self: start;
+    }
+
+    .social-button {
+        width: 6vw;
+        height: 6vw;
+    }
+
+    .social-buttons svg {
+        height: 3vw;
+    }
+
+    .github svg {
+        width: 3vw;
+        height: 3vw;
     }
 }
