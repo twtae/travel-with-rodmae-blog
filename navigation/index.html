@@ -32,7 +32,7 @@
         <main class="nav-rodmae">
             <a href="../rodmae/2/">
                 <div class="nav-rodmae-item">
-                    <div class="rodmae-pic"><img src="../pictures/2.png"></div>
+                    <div class="rodmae-pic"><img class="lazy" data-src="../pictures/2.png"></div>
                     <div class="rodmae-text">
                         <p class="rodmae-text1">2 / 3-1 (TSB)</p>
                         <p class="rodmae-text2">ปากน้ำ - สะพานพุทธ</p>
@@ -41,7 +41,7 @@
             </a>
             <a href="../rodmae/25/1/">
                 <div class="nav-rodmae-item">
-                    <div class="rodmae-pic"><img src="../pictures/25.png"></div>
+                    <div class="rodmae-pic"><img class="lazy" data-src="../pictures/25.png"></div>
                     <div class="rodmae-text">
                         <p class="rodmae-text1">25 และ 25 / 3-6 (TSB)</p>
                         <p class="rodmae-text2">แพรกษาบ่อดิน - ท่าช้าง</p>
@@ -50,7 +50,7 @@
             </a>
             <a href="../rodmae/102/">
                 <div class="nav-rodmae-item">
-                    <div class="rodmae-pic"><img src="../pictures/102.png"></div>
+                    <div class="rodmae-pic"><img class="lazy" data-src="../pictures/102.png"></div>
                     <div class="rodmae-text">
                         <p class="rodmae-text1">102</p>
                         <p class="rodmae-text2">ฟาร์มจระเข้ - เซ็นทรัลพระราม 3</p>
@@ -59,7 +59,7 @@
             </a>
             <a href="../rodmae/142/">
                 <div class="nav-rodmae-item">
-                    <div class="rodmae-pic"><img src="../pictures/142.png"></div>
+                    <div class="rodmae-pic"><img class="lazy" data-src="../pictures/142.png"></div>
                     <div class="rodmae-text">
                         <p class="rodmae-text1">142 / 3-17E</p>
                         <p class="rodmae-text2">ฟาร์มจระเข้ - แสมดำ</p>
@@ -68,7 +68,7 @@
             </a>
             <a href="../rodmae/145/">
                 <div class="nav-rodmae-item">
-                    <div class="rodmae-pic"><img src="../pictures/145.png"></div>
+                    <div class="rodmae-pic"><img class="lazy" data-src="../pictures/145.png"></div>
                     <div class="rodmae-text">
                         <p class="rodmae-text1">145 / 3-18</p>
                         <p class="rodmae-text2">ปากน้ำ - หมอชิต 2</p>
@@ -77,7 +77,7 @@
             </a>
             <a href="../rodmae/511/">
                 <div class="nav-rodmae-item">
-                    <div class="rodmae-pic"><img src="../pictures/511.png"></div>
+                    <div class="rodmae-pic"><img class="lazy" data-src="../pictures/511.png"></div>
                     <div class="rodmae-text">
                         <p class="rodmae-text1">511</p>
                         <p class="rodmae-text2">ฟาร์มจระเข้ - สายใต้ใหม่ (ตลิ่งชัน)</p>
@@ -86,7 +86,7 @@
             </a>
             <a href="../rodmae/536/">
                 <div class="nav-rodmae-item">
-                    <div class="rodmae-pic"><img src="../pictures/536.png"></div>
+                    <div class="rodmae-pic"><img class="lazy" data-src="../pictures/536.png"></div>
                     <div class="rodmae-text">
                         <p class="rodmae-text1">536</p>
                         <p class="rodmae-text2">ฟาร์มจระเข้ - หมอชิต 2</p>
@@ -95,7 +95,7 @@
             </a>
             <a href="../rodmae/552/">
                 <div class="nav-rodmae-item">
-                    <div class="rodmae-pic"><img src="../pictures/552.png"></div>
+                    <div class="rodmae-pic"><img class="lazy" data-src="../pictures/552.png"></div>
                     <div class="rodmae-text">
                         <p class="rodmae-text1">552 / 3-25E</p>
                         <p class="rodmae-text2">ปากน้ำ - นิคมฯ ลาดกระบัง</p>
@@ -106,6 +106,10 @@
     </div>
     <div class="overlay transition-overlay"></div>
     <script src="../js/main.js"></script>
+    <script type="module">
+        import LazyLoad from "https://cdn.jsdelivr.net/npm/vanilla-lazyload@19.0.3/+esm";
+        var lazyLoadInstance = new LazyLoad({});
+    </script>
 </body>
 
 </html>

@@ -17,7 +17,7 @@
         </header>
         <main id="swup" class="transition-main">
             <div class="content-container1">
-                <div class="content-pic"><img src="../../pictures/145i.jpg"></div>
+                <div class="content-pic"><img class="lazy" data-src="../../pictures/145i.jpg"></div>
                 <div class="content-title">
                     <h1>
                         145 / 3-18<br>
@@ -41,6 +41,10 @@
     </div>
     <div class="overlay transition-overlay"></div>
     <script src="../../js/main.js"></script>
+    <script type="module">
+        import LazyLoad from "https://cdn.jsdelivr.net/npm/vanilla-lazyload@19.0.3/+esm";
+        var lazyLoadInstance = new LazyLoad({});
+    </script>
 </body>
 
 </html>
