@@ -267,6 +267,12 @@ img {
     align-self: end;
 }
 
+.credit {
+    font-size: 1vw;
+    text-align: center;
+    align-self: center;
+}
+
 @media screen and (max-aspect-ratio: 22/25) {
     body {
         font-size: 3vw;
@@ -364,6 +370,11 @@ img {
     }
 
     .next-button {
+        align-self: start;
+    }
+
+    .credit {
+        font-size: 2vw;
         align-self: start;
     }
 }
