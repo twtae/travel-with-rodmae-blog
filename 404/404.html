@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เดินทางด้วยรถเมล์ได้ง่าย ๆ</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/transitions.css">
+    <script type="module" src="../js/swup.js"></script>
+</head>
+
+<body>
+    <div class="layout error404">
+        <h1>404 - Page Not Found</h1>
+        <p>โปรดระวังการกดปุ่มนำทางซ้ำหลายรอบ ขออภัย กำลังจะกลับไปหน้าก่อนหน้าในอีก <span id="countdown">4</span> วินาที...</p>
+    </div>
+
+    <script>
+        var countdown = 4;
+        var countdownElement = document.getElementById('countdown');
+
+        function countdownTimer() {
+            countdown--;
+            countdownElement.textContent = countdown;
+
+            if (countdown <= 0) {
+                history.back();
+            } else {
+                setTimeout(countdownTimer, 1000);
+            }
+        }
+
+        countdownTimer();
+    </script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
