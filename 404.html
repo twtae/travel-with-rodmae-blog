@@ -4,19 +4,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>เดินทางด้วยรถเมล์ได้ง่าย ๆ</title>
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/transitions.css">
-    <link rel="preload" as="style" href="css/main.css">
-    <script type="module" src="js/swup.js"></script>
+    <title>404 - Page Not Found</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        *,
+        *:before,
+        *:after {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Kanit';
+            margin: 0;
+            padding: 0;
+            background: rgb(35, 35, 35);
+            color: white;
+            scrollbar-width: none;
+            -ms-overflow-style: -ms-autohiding-scrollbar;
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        .error404 {
+            min-width: 100vw;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            padding: 0;
+            align-items: center;
+            justify-content: center;
+
+            h1 {
+                margin: 0 auto;
+                font-size: 5vw;
+            }
+
+            p {
+                margin: 0 auto;
+                font-size: 1.5vw;
+            }
+        }
+
+        @media screen and (max-aspect-ratio: 22/25) {
+            .error404 {
+                justify-content: center;
+
+                h1 {
+                    font-size: 8vw;
+                }
+
+                p {
+                    font-size: 2.5vw;
+                }
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <div class="layout error404">
+    <div class="error404">
         <h1>404 - Page Not Found</h1>
-        <p>โปรดระวังการกดปุ่มนำทางซ้ำหลายรอบ ขออภัย กำลังจะกลับไปหน้าก่อนหน้าในอีก <span id="countdown">4</span> วินาที...</p>
+        <p>โปรดระวังการกดปุ่มนำทางซ้ำหลายรอบ ขออภัย กำลังจะกลับไปหน้าแรกในอีก <span id="countdown">4</span>
+            วินาที...</p>
     </div>
-
     <script>
         var countdown = 4;
         var countdownElement = document.getElementById('countdown');
@@ -24,17 +78,14 @@
         function countdownTimer() {
             countdown--;
             countdownElement.textContent = countdown;
-
             if (countdown <= 0) {
-                history.back();
+                window.location.replace('/');
             } else {
                 setTimeout(countdownTimer, 1000);
             }
         }
-
         countdownTimer();
     </script>
-    <script src="js/main.js"></script>
 </body>
 
 </html>
